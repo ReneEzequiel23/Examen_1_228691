@@ -28,7 +28,7 @@ public class Modelo {
     public Modelo() {
         pacientes.add(new Paciente("12345678910", "rene"));
 
-        Medico medico1 = new Medico("1", "Médico 1", "Pediatría");
+        Medico medico1 = new Medico("1", "Octavio", "Pediatría");
 
         Consultorio cons1A = new Consultorio("C1", "1A");
         medico1.setConsultorio(cons1A);
@@ -41,7 +41,7 @@ public class Modelo {
 
         medicosDB.add(medico1);
 
-        Medico medico2 = new Medico("2", "Médico 2", "Cardiologo");
+        Medico medico2 = new Medico("2", "Polo", "Cardiologo");
 
         Consultorio cons1b = new Consultorio("D1", "1B");
         medico2.setConsultorio(cons1b);
@@ -50,6 +50,7 @@ public class Modelo {
         Map<String, List<String>> horarioMed2 = new HashMap<>();
         horarioMed2.put("L", Arrays.asList("09:00", "14:30"));
         horarioMed2.put("M", Arrays.asList("10:00", "16:00"));
+        horarioMed2.put("Mi", Arrays.asList("13:00"));
         medico2.setDisponibilidad(horarioMed2);
 
         medicosDB.add(medico2);
